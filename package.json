@@ -9,6 +9,7 @@
   "author": "Misa Ogura",
   "license": "ISC",
   "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.3.1"
   }
 }
