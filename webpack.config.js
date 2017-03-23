@@ -24,7 +24,26 @@ const commonConfig = {
   ],
 }
 
+const productionConfig = () => commonConfig
+
+const devConfig = () => {
+  const config = {
+    devServer: {
+      historyApiFallback: true,
+      stats: "errors-only",
+      host: process.env.HOST,
+      port: process.env.PORT,
+    }
+  }
+
+  // appended devConfig to commonConfig
+  return Object.assign({}, commonConfig, config)
+}
+
 module.exports = env => {
-  console.log('env: ', env)
-  return commonConfig
+  if (env === 'production') {
+    return productionConfig()
+  }
+
+  return devConfig()
 }
