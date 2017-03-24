@@ -1,0 +1,1 @@
+Based on a tutorial available @  [SurviveJS](https://survivejs.com/webpack/introduction/)
